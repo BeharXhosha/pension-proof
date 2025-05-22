@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - FACE_MESH_SERVICE_URL=ws://python-face-mesh:8000/ws/face-mesh
+    depends_on:
+      - python-face-mesh
+
+  python-face-mesh:
+    build:
+      context: ./python
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./python:/app
+    environment:
+      - PYTHONUNBUFFERED=1
