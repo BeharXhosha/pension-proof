@@ -83,34 +83,6 @@ This project leverages a modern technology stack to deliver a robust and user-fr
     * Provide status updates to users.
     * Generate necessary certificates and notifications.
 
-## Getting Started (For Developers)
-
-**(Note: This section assumes you are a developer looking to set up and run the project.)**
-
-1.  **Prerequisites:**
-    * Node.js and npm (or yarn) installed on your system.
-    * Python 3.x installed on your system.
-    * Potentially, specific Python libraries for face recognition (e.g., OpenCV, TensorFlow, Face Recognition) need to be installed.
-
-2.  **Frontend Setup (React):**
-    ```bash
-    cd frontend
-    npm install  # or yarn install
-    npm start    # or yarn start
-    ```
-    This will typically start the React development server on a local port (e.g., `http://localhost:3000`).
-
-3.  **Backend Setup (Python Server - Face Recognition):**
-    ```bash
-    cd backend  # Assuming your Python backend file is in a 'backend' directory
-    pip install -r requirements.txt  # Install any necessary Python dependencies
-    python your_face_recognition_server.py  # Replace 'your_face_recognition_server.py' with the actual filename
-    ```
-    This will start the Python server for face recognition (likely on a different port, e.g., `http://localhost:5000`).
-
-4.  **Configuration:**
-    * **API Endpoints:** Ensure that the frontend React application is configured to communicate with the correct backend API endpoints for both data submission (when implemented) and the face recognition server. This usually involves setting API base URLs in your React code.
-    * **Face Recognition Libraries:** If you are using specific face recognition libraries in Python, ensure they are correctly installed and configured according to their documentation.
 
 ## Future Enhancements
 
@@ -125,17 +97,7 @@ This project has the potential for significant future development, including:
 * **Accessibility Improvements:** Ensuring the platform adheres to accessibility standards (WCAG) to be usable by individuals with disabilities.
 * **Feedback and Support System:** Integrating a system for user feedback and providing online support.
 
-## Contributing
 
-Contributions to this project are welcome. Please follow these guidelines:
-
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix.
-3.  Make your changes and commit them with clear and concise messages.
-4.  Push your changes to your fork.
-5.  Submit a pull request to the main repository.
-
-Please adhere to any coding standards or style guides outlined in the project.
 
 ## License
 
@@ -146,5 +108,3 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 We would like to acknowledge the efforts and dedication of the developers and contributors who have worked on this project to bring a more efficient and accessible solution for pension and death registration.
 
 ---
-
-**Contact:** [Your Email Address or Contact Information]
