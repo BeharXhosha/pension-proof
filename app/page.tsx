@@ -55,13 +55,13 @@ export default function Home() {
           <h2 className="text-lg text-blue-600 mr-4">Ndarje jetësore</h2>
           <div className="flex-1 h-0.5 bg-yellow-400 rounded" />
         </div>
-        <div className="flex items-start gap-4 bg-gray-50 p-4 rounded-md">
-          <div className="bg-blue-400 p-4 rounded-md">
-            <Image src="/16447.jpg" alt="Familja" width={60} height={60} />
+        <div className="flex items-start gap-4 bg-gray-50 p-8 rounded-md min-h-[180px]">
+          <div className="bg-blue-400 p-6 rounded-md flex items-center justify-center min-w-[100px] min-h-[100px]">
+            <Image src="/16447.jpg" alt="Familja" width={80} height={80} />
           </div>
-          <div className="flex-1">
-            <h3 className="text-blue-600 mb-2">Lindja e fëmijës</h3>
-            <p className="text-sm text-gray-600">
+          <div className="flex-1 flex flex-col justify-center">
+            <h3 className="text-blue-600 mb-2 text-xl font-semibold">Lindja e fëmijës</h3>
+            <p className="text-base text-gray-700">
               Shërbimet publike që lidhen me ngjarjet jetësore të lindjes së fëmijës ofrohen si shërbime proaktive dhe
               do të nisin me rastin e lindjes në maternitetet publike dhe private të Kosovës.
             </p>

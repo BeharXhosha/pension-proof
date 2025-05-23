@@ -302,9 +302,9 @@ export default function VerifikimiPage() {
       </div>
 
       {/* Two Column Layout */}
-      <div className="flex flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-8">
         {/* Left Side: Camera Feed Card */}
-        <div className="w-full md:w-5/12">
+        <div className="w-full md:w-1/2">
           <Card>
             <CardHeader>
               <CardTitle>Verifikimi i Pensionit</CardTitle>
@@ -314,14 +314,38 @@ export default function VerifikimiPage() {
             </CardHeader>
             <CardContent>
               <div
-                style={{ position: 'relative', width: '100%', maxWidth: 400 }}
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  maxWidth: 480, // made bigger
+                  minHeight: 320, // made bigger
+                  aspectRatio: '3/2',
+                  background: '#e5e7eb', // Tailwind gray-200
+                  borderRadius: 12,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  overflow: 'hidden',
+                }}
               >
+                {!cameraActive && (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
+                    <Camera className="w-16 h-16 text-gray-400 mb-4" />
+                    <span className="text-gray-500 text-lg">Pamja e kamerës do të shfaqet këtu</span>
+                  </div>
+                )}
                 <video
                   ref={videoRef}
                   autoPlay
                   playsInline
                   muted
-                  style={{ width: '100%', borderRadius: 8, minHeight: '100%' }}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: 12,
+                    objectFit: 'cover',
+                    display: cameraActive ? 'block' : 'none',
+                  }}
                 />
                 <canvas
                   ref={canvasRef}
@@ -339,7 +363,7 @@ export default function VerifikimiPage() {
               <div className="mt-4 flex flex-wrap gap-2">
                 {!cameraActive && (
                   <Button onClick={startCamera}>
-                    <Camera className="mr-2 h-4 w-4" /> Start Kamera
+                    <Camera className="mr-2 h-4 w-4" /> Starto Kameren
                   </Button>
                 )}
 

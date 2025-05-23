@@ -59,7 +59,7 @@ export default function PensionetPage() {
                     </p>
                   </div>
 
-                  <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-12 text-center">
+                  {/* <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-12 text-center">
                     <div className="mb-4 bg-blue-100 p-4 rounded-full">
                       <Upload className="h-10 w-10 text-blue-600" />
                     </div>
@@ -68,7 +68,7 @@ export default function PensionetPage() {
                       Nëse nuk mund të përdorni kamerën, ngarkoni një fotografi të dokumentit tuaj të identifikimit
                     </p>
                     <Button className="bg-blue-600 hover:bg-blue-700">Ngarko dokumentin</Button>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
